@@ -16,7 +16,11 @@ def Recursive(Data,Number):
 
     for i in range(0,len(Data),2):
         if i == len(Data) - 1  :  
-            continue
+            if len(Temp) == 0 :  
+                return Data[-1],Id[-1]
+                break 
+            else:
+                continue
         else:
             a  =  random.choice(number)
             Temp.append(Data[i+a])
